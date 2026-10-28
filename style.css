@@ -1,0 +1,151 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    color: #ffffff;
+}
+
+.weather-app {
+    width: 100%;
+    max-width: 430px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #dbeafe;
+    margin-bottom: 25px;
+}
+
+#weather-form {
+    display: flex;
+    gap: 10px;
+}
+
+#city-input {
+    min-width: 0;
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+button {
+    padding: 13px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #38bdf8;
+    color: #082f49;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7dd3fc;
+}
+
+button:focus-visible,
+#city-input:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+#message {
+    min-height: 24px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fde68a;
+}
+
+.weather-card {
+    margin-top: 10px;
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.weather-card[hidden] {
+    display: none;
+}
+
+#city-name {
+    font-size: 23px;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+#temperature {
+    font-size: 46px;
+    margin: 0 0 8px;
+}
+
+#condition {
+    text-transform: capitalize;
+    color: #bfdbfe;
+    margin-bottom: 24px;
+}
+
+.details {
+    display: flex;
+    gap: 12px;
+}
+
+.detail-box {
+    flex: 1;
+    padding: 15px 8px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.detail-box span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #bfdbfe;
+}
+
+.detail-box strong {
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+@media (max-width: 380px) {
+    .weather-app {
+        padding: 20px;
+    }
+
+    #weather-form {
+        flex-direction: column;
+    }
+}
